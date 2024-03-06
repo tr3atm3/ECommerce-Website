@@ -1,0 +1,44 @@
+.cart {
+  position: fixed;
+  top: 3rem;
+  right: 0;
+  background-color: white;
+  border: 0.5px solid rgb(203, 133, 133);
+  min-height: 50vh;
+  min-width: 40rem;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: center;
+}
+.cartHeader h1 {
+  padding: 10px;
+  margin: 10px;
+  font-size: 2rem;
+}
+.cartHeader button {
+  padding: 5px 10px;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  cursor: pointer;
+}
+
+.contentHeader {
+  display: flex;
+  margin: 1rem 4rem;
+  justify-content: left;
+}
+
+.contentHeader h2 {
+  text-align: left;
+  padding: 1rem 4rem 1rem 0;
+  font-size: 1.8rem;
+  margin: 0 2rem 0 0;
+}
+
+.underline {
+  border-top: 1px solid black;
+  width: 80%;
+}
