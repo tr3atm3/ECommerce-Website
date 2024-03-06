@@ -1,0 +1,13 @@
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.main {
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+}

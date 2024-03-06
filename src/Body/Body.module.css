@@ -1,0 +1,18 @@
+.body {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px 30px;
+}
+
+.btnBottom {
+  display: flex;
+  padding: 15px;
+  background-color: #777;
+  border: none;
+  border-radius: 7px;
+  margin: auto;
+  cursor: pointer;
+  color: aqua;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+}

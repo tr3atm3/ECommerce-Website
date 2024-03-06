@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  margin-top: 40px;
+  padding: 20px;
+  background: #56ccf2;
+}
+
+.footerTitle {
+  text-align: center;
+  color: white;
+  width: 50%;
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0 auto;
+}

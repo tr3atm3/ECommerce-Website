@@ -1,0 +1,32 @@
+.product {
+  margin: 50px;
+}
+.product h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.imageContainer {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.price {
+  display: flex;
+  justify-content: space-between;
+  margin: 4px;
+  padding: 10px;
+  align-items: center;
+}
+
+.price button {
+  cursor: pointer;
+  padding: 8px;
+  color: white;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 4%;
+  background: #56ccf2;
+}
