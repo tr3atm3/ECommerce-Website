@@ -1,19 +1,18 @@
-import React, { useContext } from "react";
+import React from "react";
 import classes from "./Nav.module.css";
-import CartContext from "../store/cart-context";
+import CardButton from "../Cart/CartButton";
+import { Link } from "react-router-dom";
 const Nav = (props) => {
-  const cartCtx = useContext(CartContext);
-  const numberOfItems = cartCtx.items.reduce((acc, cur) => {
-    return acc + cur.quantity;
-  }, 0);
   return (
     <ul className={classes.nav}>
-      <li>Home</li>
+      <li>
+        <Link to="/">Home</Link>
+      </li>
       <li>Store</li>
-      <li>About</li>
-      <button onClick={props.onOpen}>
-        Cart<span>{numberOfItems}</span>
-      </button>
+      <li>
+        <Link to="/about">About</Link>
+      </li>
+      <CardButton onOpen={props.onOpen} />
     </ul>
   );
 };

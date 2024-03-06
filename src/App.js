@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { createBrowserRouter, Outlet } from "react-router-dom";
 import Header from "./Header/Header";
 import Body from "./Body/Body.js";
 import Footer from "./Footer/Footer.js";
 import Cart from "./Cart/Cart.js";
 import ContextProvider from "./store/ContextProvider.js";
+import About from "./About/About.js";
 
 const App = () => {
   const [showCart, setShowCart] = useState(false);
@@ -17,10 +19,24 @@ const App = () => {
     <ContextProvider>
       {showCart && <Cart onHide={hideCart} />}
       <Header onOpenCart={openCart} />
-      <Body />
+      <Outlet />
       <Footer />
     </ContextProvider>
   );
 };
-
-export default App;
+export const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+    ],
+  },
+]);
