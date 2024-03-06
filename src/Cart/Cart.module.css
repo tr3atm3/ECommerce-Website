@@ -42,3 +42,23 @@
   border-top: 1px solid black;
   width: 80%;
 }
+
+.amount {
+  text-align: right;
+  margin-right: 5rem;
+}
+.purchaseBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+
+  background: #56ccf2;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8%;
+  padding: 12px;
+  cursor: pointer;
+}

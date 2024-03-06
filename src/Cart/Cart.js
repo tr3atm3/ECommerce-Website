@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import classes from "./Cart.module.css";
 import CartItem from "../UI/CartItem";
+import CartContext from "../store/cart-context";
 
 const cartElements = [
   {
@@ -34,22 +35,12 @@ const cartElements = [
   },
 ];
 const Cart = (props) => {
-  const [cartItems, setCartItems] = useState(cartElements);
-
-  const removeItemFromCart = (item) => {
-    setCartItems((prev) => {
-      return prev.filter((i) => i.title !== item.title);
-    });
-  };
+  const cartCtx = useContext(CartContext);
 
   const cartItemsUi = (
     <ul>
-      {cartItems.map((item) => (
-        <CartItem
-          key={item.title}
-          item={item}
-          toRemoveItem={removeItemFromCart.bind(null, item)}
-        />
+      {cartCtx.items.map((item) => (
+        <CartItem key={item.title} item={item} />
       ))}
     </ul>
   );
@@ -74,6 +65,9 @@ const Cart = (props) => {
         </div>
       </div>
       {cartItemsUi}
+      <h3 className={classes.amount}>Total Amount: ({cartCtx.totalAmount})</h3>
+
+      <button className={classes.purchaseBtn}>Purchase</button>
     </div>
   );
 };

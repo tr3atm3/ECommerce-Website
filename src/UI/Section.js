@@ -6,7 +6,7 @@ const Section = (props) => {
   const products = (
     <div className={classes.products}>
       {props.productsArr.map((item) => (
-        <ProductInfo item={item} />
+        <ProductInfo key={item.title} item={item} />
       ))}
     </div>
   );

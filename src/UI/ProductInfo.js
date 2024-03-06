@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./ProductInfo.module.css";
+import CartContext from "../store/cart-context";
 const ProductInfo = ({ item }) => {
+  const cartCtx = useContext(CartContext);
   return (
     <div className={classes.product}>
       <h2>{item.title}</h2>
@@ -9,7 +11,7 @@ const ProductInfo = ({ item }) => {
       </div>
       <div className={classes.price}>
         <h3>${item.price}</h3>
-        <button>Add to Cart</button>
+        <button onClick={() => cartCtx.addItemToCart(item)}>Add to Cart</button>
       </div>
     </div>
   );
