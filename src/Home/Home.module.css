@@ -1,0 +1,38 @@
+.homeBtns {
+  background: #777;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.albumBtn {
+  display: block;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+  color: white;
+  background: transparent;
+  border: 1px solid aqua;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.playBtn {
+  margin: 2rem 0 4rem 0;
+  color: aqua;
+  font-size: 2rem;
+  background-color: transparent;
+  border: 1px solid aqua;
+  padding: 2rem 2.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.listItems {
+  list-style: none;
+  width: 50%;
+  margin: 0 auto;
+}
+.title {
+  font-size: 2.5rem;
+  width: 7rem;
+  margin: 3rem auto;
+}

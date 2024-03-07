@@ -1,0 +1,40 @@
+.listItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+}
+.date {
+  margin-right: 3rem;
+  width: 4rem;
+}
+
+.city {
+  font-size: 1.5rem;
+  min-width: 8rem;
+  margin-right: 4rem;
+}
+
+.location {
+  font-size: 1.5rem;
+  max-width: 20rem;
+  margin-right: 4rem;
+}
+
+.buyBtn {
+  font-size: 1.2rem;
+  width: 20%;
+  background: #56ccf2;
+  color: white;
+  border: none;
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.borderLine {
+  border-top: 1px solid black;
+  margin-bottom: 1rem;
+  width: 90%;
+}

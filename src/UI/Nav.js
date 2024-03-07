@@ -6,9 +6,11 @@ const Nav = (props) => {
   return (
     <ul className={classes.nav}>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/home">Home</Link>
       </li>
-      <li>Store</li>
+      <li>
+        <Link to="/">Store</Link>
+      </li>
       <li>
         <Link to="/about">About</Link>
       </li>

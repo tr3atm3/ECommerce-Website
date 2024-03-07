@@ -6,6 +6,7 @@ import Footer from "./Footer/Footer.js";
 import Cart from "./Cart/Cart.js";
 import ContextProvider from "./store/ContextProvider.js";
 import About from "./About/About.js";
+import Home from "./Home/Home.js";
 
 const App = () => {
   const [showCart, setShowCart] = useState(false);
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <About />,
+      },
+      {
+        path: "/home",
+        element: <Home />,
       },
     ],
   },
