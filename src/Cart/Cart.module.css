@@ -20,9 +20,10 @@
 .cartHeader button {
   padding: 5px 10px;
   position: absolute;
-  top: 2px;
-  right: 2px;
+  top: 5px;
+  right: 5px;
   cursor: pointer;
+  background-color: rgba(211, 19, 19, 0.841);
 }
 
 .contentHeader {

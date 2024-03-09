@@ -1,0 +1,43 @@
+.contact {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.contact h1 {
+  margin: 2rem 0;
+}
+.contactForm {
+  border: 1px groove grey;
+  border-radius: 1rem;
+  width: 40%;
+  margin: 0 auto;
+  min-width: 30rem;
+  padding: 2rem;
+}
+.contactForm label {
+  display: block;
+  text-align: left;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contactForm input {
+  width: 100%;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 1px groove lightgray;
+  border-radius: 0.5rem;
+}
+.contactForm button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: white;
+  background-color: #56ccf2;
+  cursor: pointer;
+}
+.contactForm button:active {
+  background-color: blueviolet;
+}

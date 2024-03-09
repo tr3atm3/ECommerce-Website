@@ -7,6 +7,7 @@ import Cart from "./Cart/Cart.js";
 import ContextProvider from "./store/ContextProvider.js";
 import About from "./About/About.js";
 import Home from "./Home/Home.js";
+import Contact from "./ContactUs/Contact.js";
 
 const App = () => {
   const [showCart, setShowCart] = useState(false);
@@ -41,6 +42,10 @@ export const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
       },
     ],
   },
