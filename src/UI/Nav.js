@@ -15,6 +15,9 @@ const Nav = (props) => {
         <Link to="/about">About</Link>
       </li>
       <li>
+        <Link to="/login">Login</Link>
+      </li>
+      <li>
         <Link to="/contact">Contact Us</Link>
       </li>
       <CardButton onOpen={props.onOpen} />
