@@ -1,16 +1,20 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Nav.module.css";
 import CardButton from "../Cart/CartButton";
 import { Link } from "react-router-dom";
+import CartContext from "../store/cart-context";
 const Nav = (props) => {
+  const authCtx = useContext(CartContext);
   return (
     <ul className={classes.nav}>
       <li>
-        <Link to="/home">Home</Link>
+        <Link to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/">Store</Link>
-      </li>
+      {authCtx.isLoggedin && (
+        <li>
+          <Link to="/home">Store</Link>
+        </li>
+      )}
       <li>
         <Link to="/about">About</Link>
       </li>

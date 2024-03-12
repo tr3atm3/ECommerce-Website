@@ -9,7 +9,6 @@ const Login = () => {
     const details = {
       email: email.current.value,
       password: email.current.value,
-      returnSecureToken: true,
     };
     authCtx.login(details);
   };

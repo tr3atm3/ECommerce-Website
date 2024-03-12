@@ -3,6 +3,7 @@ import CartContext from "./cart-context";
 
 const defaultState = {
   token: "",
+  isLoggedin: false,
   items: [],
   totalAmount: 0,
   addItemToCart: (item) => {},
@@ -37,7 +38,11 @@ const cartReducer = (state, action) => {
       "https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyCiEPQhh-5cxw0GuD2RX1ZShwOP-hE8B_Q",
       {
         method: "POST",
-        body: JSON.stringify(action.details),
+        body: JSON.stringify({
+          email: action.details.email,
+          password: action.details.password,
+          returnSecureToken: true,
+        }),
         headers: {
           "Content-Type": "application/json",
         },
@@ -70,6 +75,7 @@ const cartReducer = (state, action) => {
 
     return {
       items: state.items,
+      isLoggedin: true,
       totalAmount: state.totalAmount,
       token: token,
     };
@@ -96,6 +102,7 @@ const ContextProvider = (props) => {
     items: currentItems.items,
     totalAmount: currentItems.totalAmount,
     token: currentItems.token,
+    isLoggedin: currentItems.isLoggedin,
     login: login,
     addItemToCart: addItemToCart,
     removeItemFromCart: removeItemFromCart,
